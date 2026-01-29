@@ -1,0 +1,38 @@
+      /* Accessible skip link */
+      .skip-link {
+        position: absolute;
+        left: 0;
+        top: -40px;
+        background: #fff;
+        color: #000;
+        padding: 0.5rem 0.75rem;
+        border: 2px solid #000;
+        z-index: 9999;
+      }
+      .skip-link:focus {
+        top: 0;
+      }
+
+      /* Make SVG diagrams responsive and crisp */
+      .diagram svg {
+        width: 100%;
+        height: auto;
+      }
+
+      /* Reduce motion for users who prefer it */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          scroll-behavior: auto !important;
+        }
+      }
+
+      /* Improve focus visibility */
+      :focus-visible {
+        outline: 3px solid #0d6efd;
+        outline-offset: 2px;
+      }
+
+      /* Optional: slightly larger default line-height for readability */
+      body {
+        line-height: 1.55;
+      }
