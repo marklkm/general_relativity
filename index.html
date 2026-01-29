@@ -1,0 +1,1207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      General Relativity: Gravity as Curved Spacetime (Accessible Guide)
+    </title>
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      /* Accessible skip link */
+      .skip-link {
+        position: absolute;
+        left: 0;
+        top: -40px;
+        background: #fff;
+        color: #000;
+        padding: 0.5rem 0.75rem;
+        border: 2px solid #000;
+        z-index: 9999;
+      }
+      .skip-link:focus {
+        top: 0;
+      }
+
+      /* Make SVG diagrams responsive and crisp */
+      .diagram svg {
+        width: 100%;
+        height: auto;
+      }
+
+      /* Reduce motion for users who prefer it */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          scroll-behavior: auto !important;
+        }
+      }
+
+      /* Improve focus visibility */
+      :focus-visible {
+        outline: 3px solid #0d6efd;
+        outline-offset: 2px;
+      }
+
+      /* Optional: slightly larger default line-height for readability */
+      body {
+        line-height: 1.55;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="border-bottom">
+      <nav class="navbar navbar-expand-lg" aria-label="Primary navigation">
+        <div class="container">
+          <a class="navbar-brand fw-semibold" href="#">General Relativity</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#nav"
+            aria-controls="nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#idea">The idea</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#diagrams">Diagrams</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#limits">Limits of the analogy</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#quick">Quick recap</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#general-relativity">Gallery</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="container py-4">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-7">
+          <h1 class="display-6 fw-semibold">
+            Gravity isn’t a “pull” — it’s curved spacetime
+          </h1>
+          <p class="lead">
+            In General Relativity, mass and energy change the geometry of
+            spacetime. Objects move along the “straightest possible paths” in
+            that curved geometry (called <em>geodesics</em>).
+          </p>
+
+          <div class="alert alert-info" role="note">
+            <strong>Goal:</strong> Build an intuitive picture using a simple
+            “ball on a sheet” visual — then explain what it gets right, and what
+            it gets wrong.
+          </div>
+
+          <div class="d-flex gap-2 flex-wrap" aria-label="Key concepts">
+            <span class="badge text-bg-dark">Spacetime</span>
+            <span class="badge text-bg-dark">Curvature</span>
+            <span class="badge text-bg-dark">Geodesics</span>
+            <span class="badge text-bg-dark">Orbits</span>
+            <span class="badge text-bg-dark">Light bends too</span>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h2 class="h5 card-title">One-sentence summary</h2>
+              <p class="mb-0">
+                Matter tells spacetime how to curve, and curved spacetime tells
+                matter how to move.
+              </p>
+            </div>
+          </div>
+
+          <div class="card shadow-sm mt-3">
+            <div class="card-body">
+              <h2 class="h5 card-title">Accessible reading tip</h2>
+              <p class="mb-0">
+                If you prefer, zoom your browser to 125–150% — this page is
+                built to reflow without breaking.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4" />
+
+      <section id="idea" aria-labelledby="idea-title">
+        <h2 id="idea-title" class="h3">The core idea (in plain language)</h2>
+
+        <div class="row g-4 mt-1">
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h3 class="h5">Newton’s picture</h3>
+                <p>
+                  Gravity is a force pulling two masses together. It acts at a
+                  distance.
+                </p>
+                <p class="mb-0">
+                  This works extremely well in everyday life — and even for many
+                  space missions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-primary">
+              <div class="card-body">
+                <h3 class="h5">Einstein’s picture</h3>
+                <p>
+                  Gravity is what “straight-line motion” looks like when
+                  spacetime itself is curved.
+                </p>
+                <p class="mb-0">
+                  Planets orbit because they’re following straightest paths
+                  through curved geometry, not because a mysterious pulling
+                  force reaches out through space.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-4" />
+
+      <section id="diagrams" aria-labelledby="diagrams-title">
+        <h2 id="diagrams-title" class="h3">
+          Diagrams: flat space vs curved space
+        </h2>
+        <p>
+          These are simplified diagrams similar to what many short videos show:
+          a flat surface with a grid, then a heavy ball “denting” it to
+          represent curvature.
+        </p>
+
+        <div class="row g-4">
+          <!-- Flat space diagram -->
+          <div class="col-lg-6">
+            <figure class="card shadow-sm diagram">
+              <div class="card-body">
+                <h3 class="h5">1) “Flat spacetime” (no mass nearby)</h3>
+
+                <svg
+                  viewBox="0 0 800 450"
+                  role="img"
+                  aria-labelledby="flatTitle flatDesc"
+                >
+                  <title id="flatTitle">
+                    Flat space diagram: evenly spaced grid
+                  </title>
+                  <desc id="flatDesc">
+                    A rectangular grid with straight, evenly spaced horizontal
+                    and vertical lines, representing a flat geometry.
+                  </desc>
+
+                  <!-- Background -->
+                  <rect
+                    x="0"
+                    y="0"
+                    width="800"
+                    height="450"
+                    fill="white"
+                  ></rect>
+
+                  <!-- Grid lines -->
+                  <g stroke="#222" stroke-width="2" opacity="0.65">
+                    <!-- vertical -->
+                    <line x1="80" y1="60" x2="80" y2="390"></line>
+                    <line x1="160" y1="60" x2="160" y2="390"></line>
+                    <line x1="240" y1="60" x2="240" y2="390"></line>
+                    <line x1="320" y1="60" x2="320" y2="390"></line>
+                    <line x1="400" y1="60" x2="400" y2="390"></line>
+                    <line x1="480" y1="60" x2="480" y2="390"></line>
+                    <line x1="560" y1="60" x2="560" y2="390"></line>
+                    <line x1="640" y1="60" x2="640" y2="390"></line>
+                    <line x1="720" y1="60" x2="720" y2="390"></line>
+
+                    <!-- horizontal -->
+                    <line x1="80" y1="90" x2="720" y2="90"></line>
+                    <line x1="80" y1="150" x2="720" y2="150"></line>
+                    <line x1="80" y1="210" x2="720" y2="210"></line>
+                    <line x1="80" y1="270" x2="720" y2="270"></line>
+                    <line x1="80" y1="330" x2="720" y2="330"></line>
+                    <line x1="80" y1="390" x2="720" y2="390"></line>
+                  </g>
+
+                  <!-- Label -->
+                  <text
+                    x="80"
+                    y="40"
+                    font-size="26"
+                    font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial"
+                    fill="#111"
+                  >
+                    Straight lines stay straight
+                  </text>
+                </svg>
+
+                <figcaption class="mt-2">
+                  In a flat geometry, “straight” paths don’t curve toward
+                  anything.
+                </figcaption>
+              </div>
+            </figure>
+          </div>
+
+          <!-- Curved space diagram -->
+          <div class="col-lg-6">
+            <figure class="card shadow-sm diagram">
+              <div class="card-body">
+                <h3 class="h5">2) “Curved spacetime” (mass/energy present)</h3>
+
+                <svg
+                  viewBox="0 0 800 450"
+                  role="img"
+                  aria-labelledby="curvedTitle curvedDesc"
+                >
+                  <title id="curvedTitle">
+                    Curved space diagram: grid distorted toward a central ball
+                  </title>
+                  <desc id="curvedDesc">
+                    A grid whose lines bend inward toward a central shaded
+                    circle representing a heavy mass, illustrating how mass is
+                    associated with curvature in a common analogy.
+                  </desc>
+
+                  <rect
+                    x="0"
+                    y="0"
+                    width="800"
+                    height="450"
+                    fill="white"
+                  ></rect>
+
+                  <!-- Distorted grid -->
+                  <g stroke="#222" stroke-width="2" opacity="0.65" fill="none">
+                    <!-- vertical-ish curves -->
+                    <path d="M100,60 C180,170 180,280 100,390"></path>
+                    <path d="M180,60 C250,170 250,280 180,390"></path>
+                    <path d="M260,60 C310,170 310,280 260,390"></path>
+                    <path d="M340,60 C360,170 360,280 340,390"></path>
+
+                    <path d="M460,60 C440,170 440,280 460,390"></path>
+                    <path d="M540,60 C490,170 490,280 540,390"></path>
+                    <path d="M620,60 C550,170 550,280 620,390"></path>
+                    <path d="M700,60 C620,170 620,280 700,390"></path>
+
+                    <!-- horizontal-ish curves -->
+                    <path d="M80,110 C260,160 540,160 720,110"></path>
+                    <path d="M80,170 C280,210 520,210 720,170"></path>
+                    <path d="M80,230 C300,260 500,260 720,230"></path>
+                    <path d="M80,290 C280,310 520,310 720,290"></path>
+                    <path d="M80,350 C260,360 540,360 720,350"></path>
+                  </g>
+
+                  <!-- Central "mass" ball -->
+                  <defs>
+                    <radialGradient id="ballGrad" cx="35%" cy="35%" r="70%">
+                      <stop offset="0%" stop-color="#ffffff" />
+                      <stop offset="35%" stop-color="#bdbdbd" />
+                      <stop offset="100%" stop-color="#6b6b6b" />
+                    </radialGradient>
+                  </defs>
+
+                  <circle
+                    cx="400"
+                    cy="225"
+                    r="62"
+                    fill="url(#ballGrad)"
+                    stroke="#111"
+                    stroke-width="3"
+                  ></circle>
+                  <text
+                    x="400"
+                    y="310"
+                    text-anchor="middle"
+                    font-size="22"
+                    font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial"
+                    fill="#111"
+                  >
+                    Mass / energy
+                  </text>
+
+                  <!-- Example path (geodesic-like) -->
+                  <path
+                    d="M120,120 C250,110 330,150 360,200 C390,250 440,260 540,230 C640,200 700,220 720,260"
+                    stroke="#0d6efd"
+                    stroke-width="5"
+                    fill="none"
+                  ></path>
+                  <text
+                    x="120"
+                    y="95"
+                    font-size="22"
+                    font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial"
+                    fill="#0d6efd"
+                  >
+                    Example “straightest path”
+                  </text>
+                </svg>
+
+                <figcaption class="mt-2">
+                  The grid is distorted around mass. Objects follow the
+                  straightest paths available in that geometry.
+                </figcaption>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-4" />
+
+      <section id="limits" aria-labelledby="limits-title">
+        <h2 id="limits-title" class="h3">
+          Limits of the “ball on a sheet” analogy
+        </h2>
+
+        <div class="accordion" id="limitsAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="lim1">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#lim1c"
+                aria-expanded="true"
+                aria-controls="lim1c"
+              >
+                It uses Earth’s gravity to explain gravity
+              </button>
+            </h3>
+            <div
+              id="lim1c"
+              class="accordion-collapse collapse show"
+              aria-labelledby="lim1"
+              data-bs-parent="#limitsAccordion"
+            >
+              <div class="accordion-body">
+                In the demo, balls roll inward partly because Earth pulls them
+                “down” the dent. In real general relativity, there isn’t a
+                hidden downward direction — the curvature is the story.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="lim2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#lim2c"
+                aria-expanded="false"
+                aria-controls="lim2c"
+              >
+                Spacetime is 4D (3 space + time), not a 2D sheet
+              </button>
+            </h3>
+            <div
+              id="lim2c"
+              class="accordion-collapse collapse"
+              aria-labelledby="lim2"
+              data-bs-parent="#limitsAccordion"
+            >
+              <div class="accordion-body">
+                The sheet is a helpful picture, but it’s an “embedding diagram.”
+                The real geometry involves time as well, and time curvature is
+                essential for explaining many effects.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="lim3">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#lim3c"
+                aria-expanded="false"
+                aria-controls="lim3c"
+              >
+                Light follows geodesics too
+              </button>
+            </h3>
+            <div
+              id="lim3c"
+              class="accordion-collapse collapse"
+              aria-labelledby="lim3"
+              data-bs-parent="#limitsAccordion"
+            >
+              <div class="accordion-body">
+                A key idea: even light bends (its path curves) near massive
+                objects — not because light has mass, but because the geometry
+                it travels through is curved.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-4" />
+
+      <section id="quick" aria-labelledby="quick-title">
+        <h2 id="quick-title" class="h3">Quick recap</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="p-3 border rounded-4 h-100">
+              <h3 class="h5">1) Mass changes geometry</h3>
+              <p class="mb-0">More mass/energy ⟶ more curvature.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-3 border rounded-4 h-100">
+              <h3 class="h5">2) Motion follows geometry</h3>
+              <p class="mb-0">
+                Free-fall is “straightest possible motion” in curved spacetime.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-3 border rounded-4 h-100">
+              <h3 class="h5">3) Orbits are not “pulling”</h3>
+              <p class="mb-0">
+                An orbit is a geodesic-like path around a curved region.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 d-flex flex-wrap gap-2">
+          <a class="btn btn-primary" href="#diagrams">Back to diagrams</a>
+          <a class="btn btn-outline-secondary" href="#idea">Back to the idea</a>
+        </div>
+      </section>
+
+      <!-- ===== General Relativity (Image Gallery) ===== -->
+      <section
+        id="general-relativity"
+        class="py-4"
+        aria-labelledby="gr-title"
+      >
+        <header class="mb-3">
+          <h2 id="gr-title" class="h3">General Relativity</h2>
+          <p class="mb-0">
+            A responsive, accessible gallery of images. Select a thumbnail to
+            view it larger.
+          </p>
+        </header>
+
+        <div
+          class="d-flex align-items-baseline justify-content-between flex-wrap gap-2 mb-2"
+        >
+          <h3 class="h5 mb-0" id="gr-gallery-title">Image gallery</h3>
+          <p class="text-muted mb-0" id="gr-gallery-help">
+            Tip: Tab through images, Enter/Space to open.
+          </p>
+        </div>
+
+        <div class="row g-3" role="list" aria-describedby="gr-gallery-help">
+          <!-- Repeat this card for each image (img1–img22) -->
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img1.png"
+                data-img-alt="General relativity illustration 1"
+                data-img-caption="Image 1 (file: img1.png)"
+                aria-label="Open larger view: General relativity illustration 1"
+              >
+                <img
+                  src="assets/gr/img1.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 1"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 1 (file: img1.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- img2 -->
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img2.png"
+                data-img-alt="General relativity illustration 2"
+                data-img-caption="Image 2 (file: img2.png)"
+                aria-label="Open larger view: General relativity illustration 2"
+              >
+                <img
+                  src="assets/gr/img2.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 2"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 2 (file: img2.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+                    <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img3.png"
+                data-img-alt="General relativity illustration 3"
+                data-img-caption="Image 3 (file: img3.png)"
+                aria-label="Open larger view: General relativity illustration 3"
+              >
+                <img
+                  src="assets/gr/img3.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 3"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 3 (file: img3.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img4.png"
+                data-img-alt="General relativity illustration 4"
+                data-img-caption="Image 4 (file: img4.png)"
+                aria-label="Open larger view: General relativity illustration 4"
+              >
+                <img
+                  src="assets/gr/img4.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 4"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 4 (file: img4.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img5.png"
+                data-img-alt="General relativity illustration 5"
+                data-img-caption="Image 5 (file: img5.png)"
+                aria-label="Open larger view: General relativity illustration 5"
+              >
+                <img
+                  src="assets/gr/img5.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 5"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 5 (file: img5.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img6.png"
+                data-img-alt="General relativity illustration 6"
+                data-img-caption="Image 6 (file: img6.png)"
+                aria-label="Open larger view: General relativity illustration 6"
+              >
+                <img
+                  src="assets/gr/img6.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 6"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 6 (file: img6.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img7.png"
+                data-img-alt="General relativity illustration 7"
+                data-img-caption="Image 7 (file: img7.png)"
+                aria-label="Open larger view: General relativity illustration 7"
+              >
+                <img
+                  src="assets/gr/img7.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 7"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 7 (file: img7.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img8.png"
+                data-img-alt="General relativity illustration 8"
+                data-img-caption="Image 8 (file: img8.png)"
+                aria-label="Open larger view: General relativity illustration 8"
+              >
+                <img
+                  src="assets/gr/img8.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 8"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 8 (file: img8.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img9.png"
+                data-img-alt="General relativity illustration 9"
+                data-img-caption="Image 9 (file: img9.png)"
+                aria-label="Open larger view: General relativity illustration 9"
+              >
+                <img
+                  src="assets/gr/img9.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 9"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 9 (file: img9.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img10.png"
+                data-img-alt="General relativity illustration 10"
+                data-img-caption="Image 10 (file: img10.png)"
+                aria-label="Open larger view: General relativity illustration 10"
+              >
+                <img
+                  src="assets/gr/img10.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 10"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 10 (file: img10.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img11.png"
+                data-img-alt="General relativity illustration 11"
+                data-img-caption="Image 11 (file: img11.png)"
+                aria-label="Open larger view: General relativity illustration 11"
+              >
+                <img
+                  src="assets/gr/img11.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 11"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 11 (file: img11.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img12.png"
+                data-img-alt="General relativity illustration 12"
+                data-img-caption="Image 12 (file: img12.png)"
+                aria-label="Open larger view: General relativity illustration 12"
+              >
+                <img
+                  src="assets/gr/img12.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 12"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 12 (file: img12.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img13.png"
+                data-img-alt="General relativity illustration 13"
+                data-img-caption="Image 13 (file: img13.png)"
+                aria-label="Open larger view: General relativity illustration 13"
+              >
+                <img
+                  src="assets/gr/img13.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 13"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 13 (file: img13.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img14.png"
+                data-img-alt="General relativity illustration 14"
+                data-img-caption="Image 14 (file: img14.png)"
+                aria-label="Open larger view: General relativity illustration 14"
+              >
+                <img
+                  src="assets/gr/img14.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 14"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 14 (file: img14.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img15.png"
+                data-img-alt="General relativity illustration 15"
+                data-img-caption="Image 15 (file: img15.png)"
+                aria-label="Open larger view: General relativity illustration 15"
+              >
+                <img
+                  src="assets/gr/img15.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 15"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 15 (file: img15.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img16.png"
+                data-img-alt="General relativity illustration 16"
+                data-img-caption="Image 16 (file: img16.png)"
+                aria-label="Open larger view: General relativity illustration 16"
+              >
+                <img
+                  src="assets/gr/img16.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 16"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 16 (file: img16.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img17.png"
+                data-img-alt="General relativity illustration 17"
+                data-img-caption="Image 17 (file: img17.png)"
+                aria-label="Open larger view: General relativity illustration 17"
+              >
+                <img
+                  src="assets/gr/img17.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 17"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 17 (file: img17.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img18.png"
+                data-img-alt="General relativity illustration 18"
+                data-img-caption="Image 18 (file: img18.png)"
+                aria-label="Open larger view: General relativity illustration 18"
+              >
+                <img
+                  src="assets/gr/img18.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 18"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 18 (file: img18.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img19.png"
+                data-img-alt="General relativity illustration 19"
+                data-img-caption="Image 19 (file: img19.png)"
+                aria-label="Open larger view: General relativity illustration 19"
+              >
+                <img
+                  src="assets/gr/img19.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 19"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 19 (file: img19.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img20.png"
+                data-img-alt="General relativity illustration 20"
+                data-img-caption="Image 20 (file: img20.png)"
+                aria-label="Open larger view: General relativity illustration 20"
+              >
+                <img
+                  src="assets/gr/img20.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 20"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 20 (file: img20.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img21.png"
+                data-img-alt="General relativity illustration 21"
+                data-img-caption="Image 21 (file: img21.png)"
+                aria-label="Open larger view: General relativity illustration 21"
+              >
+                <img
+                  src="assets/gr/img21.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 21"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 21 (file: img21.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+            <figure class="card h-100 shadow-sm">
+              <button
+                type="button"
+                class="btn p-0 text-start"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                data-img-src="assets/gr/img22.png"
+                data-img-alt="General relativity illustration 22"
+                data-img-caption="Image 22 (file: img22.png)"
+                aria-label="Open larger view: General relativity illustration 22"
+              >
+                <img
+                  src="assets/gr/img22.png"
+                  class="card-img-top"
+                  alt="General relativity illustration 22"
+                  loading="lazy"
+                  style="aspect-ratio: 16/9; object-fit: cover"
+                />
+              </button>
+              <figcaption class="card-body py-2">
+                <p class="card-text small mb-0">Image 22 (file: img22.png)</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Modal (large image view) ===== -->
+      <div
+        class="modal fade"
+        id="imgModal"
+        tabindex="-1"
+        aria-labelledby="imgModalLabel"
+        aria-describedby="imgModalDesc"
+        aria-modal="true"
+        role="dialog"
+      >
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title h5" id="imgModalLabel">Image preview</h3>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close preview"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <figure class="mb-0">
+                <img id="modalImg" src="" alt="" class="img-fluid rounded" />
+                <figcaption class="mt-2" id="imgModalDesc"></figcaption>
+              </figure>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <a
+                id="openInNewTab"
+                class="btn btn-outline-secondary"
+                href="#"
+                target="_blank"
+                rel="noopener"
+              >
+                Open image in new tab
+              </a>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        // Populate modal with the clicked image (trigger is a <button> for keyboard access)
+        const imgModal = document.getElementById("imgModal");
+        imgModal.addEventListener("show.bs.modal", (event) => {
+          const trigger = event.relatedTarget;
+          if (!trigger) return;
+
+          const src = trigger.getAttribute("data-img-src");
+          const alt = trigger.getAttribute("data-img-alt");
+          const caption = trigger.getAttribute("data-img-caption");
+
+          const modalImg = document.getElementById("modalImg");
+          const modalDesc = document.getElementById("imgModalDesc");
+          const openInNewTab = document.getElementById("openInNewTab");
+
+          modalImg.src = src;
+          modalImg.alt = alt;
+          modalDesc.textContent = caption;
+          openInNewTab.href = src;
+
+          document.getElementById("imgModalLabel").textContent = alt;
+        });
+
+        imgModal.addEventListener("hidden.bs.modal", () => {
+          const modalImg = document.getElementById("modalImg");
+          modalImg.src = "";
+          modalImg.alt = "";
+          document.getElementById("imgModalDesc").textContent = "";
+          document.getElementById("imgModalLabel").textContent =
+            "Image preview";
+        });
+      </script>
+
+      <footer class="mt-5 pt-3 border-top">
+        <p class="mb-1">
+          Built with accessible Bootstrap components (skip link, semantic
+          headings, figure captions, and clear focus states).
+        </p>
+        <p class="text-muted mb-0">
+          Tip: If you want, you can add a short “Video summary” section once you
+          provide the key points from the clip.
+        </p>
+      </footer>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
