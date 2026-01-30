@@ -6,7 +6,6 @@
     <title>
       General Relativity: Gravity as Curved Spacetime (Accessible Guide)
     </title>
-    <meta name="theme-color" content="#0d6efd" />
     <!-- Favicons -->
     <link
       rel="icon"
@@ -238,62 +237,65 @@
               <div class="card-body">
                 <h3 class="h5">1) “Flat spacetime” (no mass nearby)</h3>
 
-                <svg
-                  viewBox="0 0 800 450"
-                  role="img"
-                  aria-labelledby="flatTitle flatDesc"
-                >
-                  <title id="flatTitle">
-                    Flat space diagram: evenly spaced grid
-                  </title>
-                  <meta name="theme-color" content="#0d6efd" />
-                  <desc id="flatDesc">
-                    A rectangular grid with straight, evenly spaced horizontal
-                    and vertical lines, representing a flat geometry.
-                  </desc>
-
-                  <!-- Background -->
-                  <rect
-                    x="0"
-                    y="0"
-                    width="800"
-                    height="450"
-                    fill="white"
-                  ></rect>
-
-                  <!-- Grid lines -->
-                  <g stroke="#222" stroke-width="2" opacity="0.65">
-                    <!-- vertical -->
-                    <line x1="80" y1="60" x2="80" y2="390"></line>
-                    <line x1="160" y1="60" x2="160" y2="390"></line>
-                    <line x1="240" y1="60" x2="240" y2="390"></line>
-                    <line x1="320" y1="60" x2="320" y2="390"></line>
-                    <line x1="400" y1="60" x2="400" y2="390"></line>
-                    <line x1="480" y1="60" x2="480" y2="390"></line>
-                    <line x1="560" y1="60" x2="560" y2="390"></line>
-                    <line x1="640" y1="60" x2="640" y2="390"></line>
-                    <line x1="720" y1="60" x2="720" y2="390"></line>
-
-                    <!-- horizontal -->
-                    <line x1="80" y1="90" x2="720" y2="90"></line>
-                    <line x1="80" y1="150" x2="720" y2="150"></line>
-                    <line x1="80" y1="210" x2="720" y2="210"></line>
-                    <line x1="80" y1="270" x2="720" y2="270"></line>
-                    <line x1="80" y1="330" x2="720" y2="330"></line>
-                    <line x1="80" y1="390" x2="720" y2="390"></line>
-                  </g>
-
-                  <!-- Label -->
-                  <text
-                    x="80"
-                    y="40"
-                    font-size="26"
-                    font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial"
-                    fill="#111"
+                <div class="ratio ratio-16x9">
+                  <svg
+                    class="w-100 h-100"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 800 450"
+                    role="img"
+                    aria-labelledby="flatTitle flatDesc"
                   >
-                    Straight lines stay straight
-                  </text>
-                </svg>
+                    <title id="flatTitle">
+                      Flat space diagram: evenly spaced grid
+                    </title>
+                    <desc id="flatDesc">
+                      A rectangular grid with straight, evenly spaced horizontal
+                      and vertical lines, representing a flat geometry.
+                    </desc>
+
+                    <!-- Background -->
+                    <rect
+                      x="0"
+                      y="0"
+                      width="800"
+                      height="450"
+                      fill="white"
+                    ></rect>
+
+                    <!-- Grid lines -->
+                    <g stroke="#222" stroke-width="2" opacity="0.65">
+                      <!-- vertical -->
+                      <line x1="80" y1="60" x2="80" y2="390"></line>
+                      <line x1="160" y1="60" x2="160" y2="390"></line>
+                      <line x1="240" y1="60" x2="240" y2="390"></line>
+                      <line x1="320" y1="60" x2="320" y2="390"></line>
+                      <line x1="400" y1="60" x2="400" y2="390"></line>
+                      <line x1="480" y1="60" x2="480" y2="390"></line>
+                      <line x1="560" y1="60" x2="560" y2="390"></line>
+                      <line x1="640" y1="60" x2="640" y2="390"></line>
+                      <line x1="720" y1="60" x2="720" y2="390"></line>
+
+                      <!-- horizontal -->
+                      <line x1="80" y1="90" x2="720" y2="90"></line>
+                      <line x1="80" y1="150" x2="720" y2="150"></line>
+                      <line x1="80" y1="210" x2="720" y2="210"></line>
+                      <line x1="80" y1="270" x2="720" y2="270"></line>
+                      <line x1="80" y1="330" x2="720" y2="330"></line>
+                      <line x1="80" y1="390" x2="720" y2="390"></line>
+                    </g>
+
+                    <!-- Label -->
+                    <text
+                      x="80"
+                      y="40"
+                      font-size="26"
+                      font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial"
+                      fill="#111"
+                    >
+                      Straight lines stay straight
+                    </text>
+                  </svg>
+                </div>
 
                 <figcaption class="mt-2">
                   In a flat geometry, “straight” paths don’t curve toward
@@ -309,95 +311,103 @@
               <div class="card-body">
                 <h3 class="h5">2) “Curved spacetime” (mass/energy present)</h3>
 
-                <svg
-                  viewBox="0 0 800 450"
-                  role="img"
-                  aria-labelledby="curvedTitle curvedDesc"
-                >
-                  <title id="curvedTitle">
-                    Curved space diagram: grid distorted toward a central ball
-                  </title>
-                  <meta name="theme-color" content="#0d6efd" />
-                  <desc id="curvedDesc">
-                    A grid whose lines bend inward toward a central shaded
-                    circle representing a heavy mass, illustrating how mass is
-                    associated with curvature in a common analogy.
-                  </desc>
-
-                  <rect
-                    x="0"
-                    y="0"
-                    width="800"
-                    height="450"
-                    fill="white"
-                  ></rect>
-
-                  <!-- Distorted grid -->
-                  <g stroke="#222" stroke-width="2" opacity="0.65" fill="none">
-                    <!-- vertical-ish curves -->
-                    <path d="M100,60 C180,170 180,280 100,390"></path>
-                    <path d="M180,60 C250,170 250,280 180,390"></path>
-                    <path d="M260,60 C310,170 310,280 260,390"></path>
-                    <path d="M340,60 C360,170 360,280 340,390"></path>
-
-                    <path d="M460,60 C440,170 440,280 460,390"></path>
-                    <path d="M540,60 C490,170 490,280 540,390"></path>
-                    <path d="M620,60 C550,170 550,280 620,390"></path>
-                    <path d="M700,60 C620,170 620,280 700,390"></path>
-
-                    <!-- horizontal-ish curves -->
-                    <path d="M80,110 C260,160 540,160 720,110"></path>
-                    <path d="M80,170 C280,210 520,210 720,170"></path>
-                    <path d="M80,230 C300,260 500,260 720,230"></path>
-                    <path d="M80,290 C280,310 520,310 720,290"></path>
-                    <path d="M80,350 C260,360 540,360 720,350"></path>
-                  </g>
-
-                  <!-- Central "mass" ball -->
-                  <defs>
-                    <radialGradient id="ballGrad" cx="35%" cy="35%" r="70%">
-                      <stop offset="0%" stop-color="#ffffff" />
-                      <stop offset="35%" stop-color="#bdbdbd" />
-                      <stop offset="100%" stop-color="#6b6b6b" />
-                    </radialGradient>
-                  </defs>
-
-                  <circle
-                    cx="400"
-                    cy="225"
-                    r="62"
-                    fill="url(#ballGrad)"
-                    stroke="#111"
-                    stroke-width="3"
-                  ></circle>
-                  <text
-                    x="400"
-                    y="310"
-                    text-anchor="middle"
-                    font-size="22"
-                    font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial"
-                    fill="#111"
+                <div class="ratio ratio-16x9">
+                  <svg
+                    class="w-100 h-100"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 800 450"
+                    role="img"
+                    aria-labelledby="curvedTitle curvedDesc"
                   >
-                    Mass / energy
-                  </text>
+                    <title id="curvedTitle">
+                      Curved space diagram: grid distorted toward a central ball
+                    </title>
+                    <desc id="curvedDesc">
+                      A grid whose lines bend inward toward a central shaded
+                      circle representing a heavy mass, illustrating how mass is
+                      associated with curvature in a common analogy.
+                    </desc>
 
-                  <!-- Example path (geodesic-like) -->
-                  <path
-                    d="M120,120 C250,110 330,150 360,200 C390,250 440,260 540,230 C640,200 700,220 720,260"
-                    stroke="#0d6efd"
-                    stroke-width="5"
-                    fill="none"
-                  ></path>
-                  <text
-                    x="120"
-                    y="95"
-                    font-size="22"
-                    font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial"
-                    fill="#0d6efd"
-                  >
-                    Example “straightest path”
-                  </text>
-                </svg>
+                    <rect
+                      x="0"
+                      y="0"
+                      width="800"
+                      height="450"
+                      fill="white"
+                    ></rect>
+
+                    <!-- Distorted grid -->
+                    <g
+                      stroke="#222"
+                      stroke-width="2"
+                      opacity="0.65"
+                      fill="none"
+                    >
+                      <!-- vertical-ish curves -->
+                      <path d="M100,60 C180,170 180,280 100,390"></path>
+                      <path d="M180,60 C250,170 250,280 180,390"></path>
+                      <path d="M260,60 C310,170 310,280 260,390"></path>
+                      <path d="M340,60 C360,170 360,280 340,390"></path>
+
+                      <path d="M460,60 C440,170 440,280 460,390"></path>
+                      <path d="M540,60 C490,170 490,280 540,390"></path>
+                      <path d="M620,60 C550,170 550,280 620,390"></path>
+                      <path d="M700,60 C620,170 620,280 700,390"></path>
+
+                      <!-- horizontal-ish curves -->
+                      <path d="M80,110 C260,160 540,160 720,110"></path>
+                      <path d="M80,170 C280,210 520,210 720,170"></path>
+                      <path d="M80,230 C300,260 500,260 720,230"></path>
+                      <path d="M80,290 C280,310 520,310 720,290"></path>
+                      <path d="M80,350 C260,360 540,360 720,350"></path>
+                    </g>
+
+                    <!-- Central "mass" ball -->
+                    <defs>
+                      <radialGradient id="ballGrad" cx="35%" cy="35%" r="70%">
+                        <stop offset="0%" stop-color="#ffffff" />
+                        <stop offset="35%" stop-color="#bdbdbd" />
+                        <stop offset="100%" stop-color="#6b6b6b" />
+                      </radialGradient>
+                    </defs>
+
+                    <circle
+                      cx="400"
+                      cy="225"
+                      r="62"
+                      fill="url(#ballGrad)"
+                      stroke="#111"
+                      stroke-width="3"
+                    ></circle>
+                    <text
+                      x="400"
+                      y="310"
+                      text-anchor="middle"
+                      font-size="22"
+                      font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial"
+                      fill="#111"
+                    >
+                      Mass / energy
+                    </text>
+
+                    <!-- Example path (geodesic-like) -->
+                    <path
+                      d="M120,120 C250,110 330,150 360,200 C390,250 440,260 540,230 C640,200 700,220 720,260"
+                      stroke="#0d6efd"
+                      stroke-width="5"
+                      fill="none"
+                    ></path>
+                    <text
+                      x="120"
+                      y="95"
+                      font-size="22"
+                      font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial"
+                      fill="#0d6efd"
+                    >
+                      Example “straightest path”
+                    </text>
+                  </svg>
+                </div>
 
                 <figcaption class="mt-2">
                   The grid is distorted around mass. Objects follow the
