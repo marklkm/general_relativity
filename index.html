@@ -6,6 +6,7 @@
     <title>
       General Relativity: Gravity as Curved Spacetime (Accessible Guide)
     </title>
+    <meta name="theme-color" content="#0d6efd" />
     <!-- Favicons -->
     <link
       rel="icon"
@@ -25,20 +26,6 @@
       href="assets/brand/favicons/favicon-mono-180.png"
     />
     <link rel="icon" href="assets/brand/favicons/favicon-mono.ico" />
-
-    <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="assets/favicons/android-chrome-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="512x512"
-      href="assets/favicons/android-chrome-512x512.png"
-    />
     <link
       rel="mask-icon"
       href="assets/brand/favicons/safari-pinned-tab.svg"
@@ -55,6 +42,18 @@
     <link rel="stylesheet" href="css/main.css" />
 
     <style>
+      /* Navbar brand logo */
+      .brand-logo {
+        object-fit: cover;
+        flex: 0 0 auto;
+      }
+      @media (min-width: 992px) {
+        .brand-logo {
+          width: 44px;
+          height: 44px;
+        }
+      }
+
       /* Gallery thumbnails: crop gently on larger screens, show more of the image on phones */
       .gr-thumb {
         width: 100%;
@@ -87,8 +86,8 @@
             <img
               src="assets/brand/albert_einstein_logo.jpg"
               alt="Illustration of Albert Einstein"
-              width="100"
-              height="100"
+              width="40"
+              height="40"
               class="brand-logo rounded-circle border"
             />
             <span>General Relativity</span>
@@ -247,6 +246,7 @@
                   <title id="flatTitle">
                     Flat space diagram: evenly spaced grid
                   </title>
+                  <meta name="theme-color" content="#0d6efd" />
                   <desc id="flatDesc">
                     A rectangular grid with straight, evenly spaced horizontal
                     and vertical lines, representing a flat geometry.
@@ -317,6 +317,7 @@
                   <title id="curvedTitle">
                     Curved space diagram: grid distorted toward a central ball
                   </title>
+                  <meta name="theme-color" content="#0d6efd" />
                   <desc id="curvedDesc">
                     A grid whose lines bend inward toward a central shaded
                     circle representing a heavy mass, illustrating how mass is
@@ -564,15 +565,10 @@
                 data-bs-target="#imgModal"
                 data-img-src="assets/gr/img1.png"
                 data-img-alt="This is a ball."
+                data-img-caption="This is a ball."
                 aria-label="Open larger view: General relativity illustration 1"
               >
-                <img
-                  src="assets/gr/img1.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 1"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img1.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">This is a ball.</p>
@@ -593,13 +589,7 @@
                 data-img-caption="This ball has mass."
                 aria-label="Open larger view: General relativity illustration 2"
               >
-                <img
-                  src="assets/gr/img2.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 2"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img2.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">The ball has mass.</p>
@@ -619,13 +609,7 @@
                 data-img-caption="More mass. Less mass."
                 aria-label="Open larger view: General relativity illustration 3"
               >
-                <img
-                  src="assets/gr/img3.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 3"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img3.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">More mass. Less mass.</p>
@@ -645,13 +629,7 @@
                 data-img-caption="Mass warps space."
                 aria-label="Open larger view: General relativity illustration 4"
               >
-                <img
-                  src="assets/gr/img4.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 4"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img4.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">Mass warps space.</p>
@@ -671,13 +649,7 @@
                 data-img-caption="Less mass, less warp."
                 aria-label="Open larger view: General relativity illustration 5"
               >
-                <img
-                  src="assets/gr/img5.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 5"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img5.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">Less mass, less warp.</p>
@@ -697,13 +669,7 @@
                 data-img-caption="More mass, more warp."
                 aria-label="Open larger view: General relativity illustration 6"
               >
-                <img
-                  src="assets/gr/img6.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 6"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img6.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">More mass, more warp.</p>
@@ -720,15 +686,10 @@
                 data-bs-target="#imgModal"
                 data-img-src="assets/gr/img7.png"
                 data-img-alt="GeneIt wants to go here."
+                data-img-caption="It wants to go here."
                 aria-label="Open larger view: General relativity illustration 7"
               >
-                <img
-                  src="assets/gr/img7.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 7"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img7.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">It wants to go here.</p>
@@ -748,13 +709,7 @@
                 data-img-caption="But it can't."
                 aria-label="Open larger view: General relativity illustration 8"
               >
-                <img
-                  src="assets/gr/img8.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 8"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img8.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">But it can't.</p>
@@ -774,13 +729,7 @@
                 data-img-caption="It must follow the shortest path through curved space."
                 aria-label="Open larger view: General relativity illustration 9"
               >
-                <img
-                  src="assets/gr/img9.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 9"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img9.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">
@@ -802,13 +751,7 @@
                 data-img-caption="The ball is spinning."
                 aria-label="Open larger view: General relativity illustration 10"
               >
-                <img
-                  src="assets/gr/img10.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 10"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img10.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">The ball is spinning.</p>
@@ -828,13 +771,7 @@
                 data-img-caption="Mass drags space."
                 aria-label="Open larger view: General relativity illustration 11"
               >
-                <img
-                  src="assets/gr/img11.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 11"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img11.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">Mass drags space.</p>
@@ -854,13 +791,7 @@
                 data-img-caption="Space drags mass."
                 aria-label="Open larger view: General relativity illustration 12"
               >
-                <img
-                  src="assets/gr/img12.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 12"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img12.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">Space drags mass.</p>
@@ -880,13 +811,7 @@
                 data-img-caption="This is flat space from a different angle."
                 aria-label="Open larger view: General relativity illustration 13"
               >
-                <img
-                  src="assets/gr/img13.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 13"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img13.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">
@@ -908,13 +833,7 @@
                 data-img-caption="See mass warp space from this angle."
                 aria-label="Open larger view: General relativity illustration 14"
               >
-                <img
-                  src="assets/gr/img14.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 14"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img14.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">
@@ -936,13 +855,7 @@
                 data-img-caption="Shrink a large mass enough to make it a black hole."
                 aria-label="Open larger view: General relativity illustration 15"
               >
-                <img
-                  src="assets/gr/img15.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 15"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img15.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">
@@ -965,13 +878,7 @@
                   area."
                 aria-label="Open larger view: General relativity illustration 16"
               >
-                <img
-                  src="assets/gr/img16.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 16"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img16.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">
@@ -995,13 +902,7 @@
                   its warp."
                 aria-label="Open larger view: General relativity illustration 17"
               >
-                <img
-                  src="assets/gr/img17.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 17"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img17.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">
@@ -1024,13 +925,7 @@
                 data-img-caption="   The center of a black hole is called a singularity."
                 aria-label="Open larger view: General relativity illustration 18"
               >
-                <img
-                  src="assets/gr/img18.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 18"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img18.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">
@@ -1052,13 +947,7 @@
                 data-img-caption=" Two black holes can spin around each other."
                 aria-label="Open larger view: General relativity illustration 19"
               >
-                <img
-                  src="assets/gr/img19.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 19"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img19.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">
@@ -1080,13 +969,7 @@
                 data-img-caption=" They send ripples though space called gravitational waves."
                 aria-label="Open larger view: General relativity illustration 20"
               >
-                <img
-                  src="assets/gr/img20.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 20"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img20.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">
@@ -1108,13 +991,7 @@
                 data-img-caption="  These waves stretch and squish space throughout the universe."
                 aria-label="Open larger view: General relativity illustration 21"
               >
-                <img
-                  src="assets/gr/img21.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 21"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img21.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">
@@ -1136,13 +1013,7 @@
                 data-img-caption=" Know you know General Relativity!"
                 aria-label="Open larger view: General relativity illustration 22"
               >
-                <img
-                  src="assets/gr/img22.png"
-                  class="card-img-top"
-                  alt="General relativity illustration 22"
-                  loading="lazy"
-                  class="gr-thumb"
-                />
+                <img src="assets/gr/img22.png" class="card-img-top gr-thumb" />
               </button>
               <figcaption class="card-body py-2">
                 <p class="card-text small mb-0">
@@ -1220,6 +1091,47 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      // Populate modal with the clicked image (trigger is a <button> for keyboard access)
+      const imgModal = document.getElementById("imgModal");
+      if (imgModal) {
+        imgModal.addEventListener("show.bs.modal", (event) => {
+          const trigger = event.relatedTarget;
+          if (!trigger) return;
+
+          const src = trigger.getAttribute("data-img-src");
+          const alt = trigger.getAttribute("data-img-alt") || "Image preview";
+          const caption = trigger.getAttribute("data-img-caption") || "";
+
+          const modalImg = document.getElementById("modalImg");
+          const modalDesc = document.getElementById("imgModalDesc");
+          const openInNewTab = document.getElementById("openInNewTab");
+          const label = document.getElementById("imgModalLabel");
+
+          if (modalImg) {
+            modalImg.src = src || "";
+            modalImg.alt = alt;
+          }
+          if (modalDesc) modalDesc.textContent = caption;
+          if (openInNewTab && src) openInNewTab.href = src;
+          if (label) label.textContent = alt;
+        });
+
+        imgModal.addEventListener("hidden.bs.modal", () => {
+          const modalImg = document.getElementById("modalImg");
+          const modalDesc = document.getElementById("imgModalDesc");
+          const label = document.getElementById("imgModalLabel");
+          if (modalImg) {
+            modalImg.src = "";
+            modalImg.alt = "";
+          }
+          if (modalDesc) modalDesc.textContent = "";
+          if (label) label.textContent = "Image preview";
+        });
+      }
+    </script>
+
     <script src="js/main.js"></script>
   </body>
 </html>
