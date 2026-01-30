@@ -15,6 +15,24 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/main.css" />
+
+    <style>
+      /* Gallery thumbnails: crop gently on larger screens, show more of the image on phones */
+      .gr-thumb {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+      /* On small phones, show one image per row and avoid heavy cropping */
+      @media (max-width: 575.98px) {
+        .gr-thumb {
+          aspect-ratio: auto;
+          max-height: 70vh;
+          object-fit: contain;
+          background: #f8f9fa;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -485,7 +503,7 @@
 
         <div class="row g-3" role="list" aria-describedby="gr-gallery-help">
           <!-- Repeat this card for each image (img1–img22) -->
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -501,7 +519,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 1"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -511,7 +529,7 @@
           </div>
 
           <!-- img2 -->
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -528,7 +546,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 2"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -537,7 +555,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -554,7 +572,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 3"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -563,7 +581,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -580,7 +598,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 4"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -589,7 +607,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -606,7 +624,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 5"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -615,7 +633,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -632,7 +650,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 6"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -641,7 +659,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -657,7 +675,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 7"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -666,7 +684,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -683,7 +701,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 8"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -692,7 +710,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -709,7 +727,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 9"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -720,7 +738,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -737,7 +755,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 10"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -746,7 +764,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -763,7 +781,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 11"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -772,7 +790,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -789,7 +807,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 12"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -798,7 +816,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -815,7 +833,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 13"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -826,7 +844,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -843,7 +861,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 14"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -854,7 +872,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -871,7 +889,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 15"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -882,7 +900,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -900,7 +918,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 16"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -912,7 +930,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -930,7 +948,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 17"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -942,7 +960,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -959,7 +977,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 18"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -970,7 +988,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -987,7 +1005,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 19"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -998,7 +1016,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -1015,7 +1033,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 20"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -1026,7 +1044,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -1043,7 +1061,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 21"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
@@ -1054,7 +1072,7 @@
             </figure>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3" role="listitem">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" role="listitem">
             <figure class="card h-100 shadow-sm">
               <button
                 type="button"
@@ -1071,7 +1089,7 @@
                   class="card-img-top"
                   alt="General relativity illustration 22"
                   loading="lazy"
-                  style="aspect-ratio: 16/9; object-fit: cover"
+                  class="gr-thumb"
                 />
               </button>
               <figcaption class="card-body py-2">
