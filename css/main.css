@@ -36,3 +36,13 @@
       body {
         line-height: 1.55;
       }
+
+      .brand-logo{
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+
+/* Slightly larger logo on wider screens */
+@media (min-width: 992px){
+  .brand-logo{ width: 100px; height: 100px; }
+}
